@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Matters: Glosario</title>
+    <link rel="stylesheet" href="styleglosario.css">
+</head>
+
+<body>
+    <header>
+        <header class="header">
+            <div class="menu container">
+                <img src="imagenes/Logo.png" alt="" class="logou"><a href="index.html" class="logo"></a>
+
+                <input type="checkbox" id="menu">
+                <label for="menu">
+                    <img src="images/menu" class="menu icono" alt="">
+                </label>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="index.html">inicio</a></li>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Area de control</a></li>
+                        <li><a href="#">Charla</a></li>
+                        <li><a href="glosario.html">Glosario</a></li>
+                        <li><a href="Informate.html">Informate</a></li>
+                        <li><a href="#">Más</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </header>
+
+
+    <main>
+        <div class="title-container">
+            <h1>Glosario de Terminología Financiera</h1>
+        </div>
+        <script>
+            const glossaryList = document.getElementById('glossaryList');
+            const searchInput = document.getElementById('searchInput');
+            
+            searchInput.addEventListener('input', function() {
+              const searchTerm = searchInput.value.toLowerCase();
+            
+              Array.from(glossaryList.children).forEach(function(item) {
+                const term = item.querySelector('strong').textContent.toLowerCase();
+            
+                if (term.includes(searchTerm)) {
+                  item.style.display = 'block';
+                } else {
+                  item.style.display = 'none';
+                }
+              });
+            });
+            </script>
+
+        <div class="terminos">
+
+            <h2>Activo</h2>
+            <p>Un recurso económico que posee un valor intrínseco y puede ser propiedad de una persona, empresa o
+                entidad.</p>
+            <h2>Capitalización</h2>
+            <p>La capitalización se refiere al proceso de aumentar el valor de una inversión mediante la acumulación de
+                intereses o ganancias a lo largo del tiempo.
+            </p>
+
+            <h2>Deuda</h2>
+            <p>Un compromiso financiero en el que una entidad debe pagar una cantidad específica de dinero en el futuro.
+            </p>
+
+            <h2>Diversificación</h2>
+            <p>La diversificación es una estrategia de inversión que implica la distribución de los activos en
+                diferentes tipos de inversiones para reducir el riesgo.</p>
+
+            <h2>Inflación</h2>
+            <p>La inflación es el aumento generalizado y sostenido de los precios de bienes y servicios en una economía
+                durante un período de tiempo.
+            </p>
+            <h2>Interés Compuesto</h2>
+            <p>El interés compuesto es el interés que se calcula no solo sobre el capital inicial de un préstamo o
+                inversión, sino también sobre los intereses acumulados anteriormente.</p>
+
+            <h2>Liquidez</h2>
+            <p>La liquidez es la capacidad de un activo para ser convertido rápidamente en efectivo sin causar una
+                pérdida significativa de valor.
+            </p>
+        </div>
+
+        <!-- Agrega más definiciones aquí -->
+
+    </main>
+    
+
+    
+</body>
+
+</html>
